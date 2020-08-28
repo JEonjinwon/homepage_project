@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>홈페이지</title>
+<link href="https://fonts.googleapis.com/css?family=Jua&display=swap"
+	rel="stylesheet">
+
+<script>
+
+	var files = [ "media/85.jpg","media/86.jpg","media/87.jpg","media/88.jpg","media/89.jpg","media/90.jpg","media/91.jpg",
+		"media/92.jpg","media/93.jpg","media/94.jpg","media/95.jpg",
+		"media/96.jpg","media/97.jpg","media/98.jpg","media/99.jpg","media/100.jpg"];
+	var imgs = new Array();
+	for (var i = 0; i < files.length; i++) {
+		imgs[i] = new Image(); // 이미지 객체 생성
+		imgs[i].src = files[i]; // 이미지 미리 로딩
+	}
+
+	//다음 이미지 출력
+	var next = 1;
+	function change(img) {
+		img.src = imgs[next].src; // 이미지 변경
+		next++; // 다음 이미지 인덱스
+		next %= imgs.length; // 개수를 넘으면 처음으로
+	}
+	function load() {
+		var select = document.getElementById("site");
+		window.location=select.options[select.selectedIndex].value;
+		
+	}
+
+</script>
+
+
+<style>
+body {
+	text-shadow: 1px 1px black;
+	color: azure;
+	margin: 0;
+	padding: 5px;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(http://grassone90.cafe24.com/web/upload/NNEditor/20170620/3O9A9637_shop1_132053.jpg);
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	font-family: "Jua";
+	text-align: center;
+}
+
+#menubar {
+	background: olive;
+	width: 70%; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menubar ul {
+	text-align: center;
+	width: 100%;
+	/* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+}
+
+#menubar ul li {
+	display: inline-block; /* 새 줄로 넘어가지 않게 */
+	list-style-type: none; /* 마커 삭제 */
+	padding: 0px 80px; /* top=bottom=0, left=right=80px */
+}
+
+#menubar ul li a {
+	color: white;
+	text-decoration: none; /* 링크 보이지 않게 */
+}
+
+#menubar ul li a:hover {
+	color: violet; /* 마우스 올라 갈 때 색 */
+}
+
+.header {
+	width: 100%;
+	height: 70px;
+	background: black;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	table-layout: fixed;
+}
+
+.out {
+	width: 100%;
+	text-align: center;
+}
+
+.in {
+	display: inline-block;
+}
+
+a:link {
+	text-decoration: none;
+	color: olive;
+}
+
+a:visited {
+	text-decoration: none;
+	color: olive;
+}
+
+a:active {
+	text-decoration: none;
+	color: olive;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: olive;
+}
+
+@keyframes bomb {from { font-size100%;
+	
+}
+
+to {
+	font-size: 300%;
+}
+
+}
+span {
+	animation-name: bomb;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+.table1 {
+	border: 0;
+	border-collapse: collapse;
+	text-align: center;
+	table-layout: fixed;
+}
+
+.out {
+	width: 70%;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.in {
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+	<br>
+	<header class="header">
+		<a href="메인페이지.html"> 스니커 사이트 </a>
+	</header>
+	<nav id="menubar">
+		<ul>
+			<li><a href="메인페이지.html">홈 </a></li>
+			<li><a href="브랜드.html">브랜드 </a></li>
+			<li><a href="COORDINATES.html">COORDINATES</a></li>
+			<li><a href="갤러리.html">갤러리</a></li>
+		</ul>
+	</nav><br><br>
+		
+	<section>
+		<div class="out">
+			<div class="in">
+				<table width="100%"  class="table1">
+					<tr>
+						<td><span>사진 클릭<br> <img
+								style="border: 20px ridge wheat" src="media/85.jpg" alt="."
+								width="400" height="400" onclick="change(this)"></span></td>
+						<td><ifram src ="ifram1.html"width="400" height="400"> <span>사이트 선택 <br> <select id="site">
+								<option value="https://www.nike.com/" selected>나이키
+								<option value="https://shop.adidas.co.kr">아디다스
+								<option value="https://kr.puma.com/">푸마
+								<option value="https://www.nbkorea.com/">뉴발란스
+								<option value="https://shop.vans.co.kr/">반스
+								<option value="https://shop.vans.co.kr/">카시나
+								<option value="https://footsell.com/">풋셀
+								<option value="http://atmos-seoul.com/">아트모스 서울
+								<option value="http://sneakermania.co.kr/">스니커매니아
+								<option value="https://www.jdsports.co.kr/">JD스포츠
+						</select></span>
+						<br><br>	<button onclick="load()">접속</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+
+
+
+</body>
+</html>

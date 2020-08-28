@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>갤러리</title>
+<link href="https://fonts.googleapis.com/css?family=Jua&display=swap"
+	rel="stylesheet">
+<style>
+body {
+	text-shadow: 1px 1px black;
+	color: azure;
+	margin: 0;
+	padding: 5px;
+	height: 100%;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(http://grassone90.cafe24.com/web/upload/NNEditor/20170620/3O9A9637_shop1_132053.jpg);
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	font-family: "Jua";
+	text-align: center;
+}
+
+table {
+	border: 1px solid #333333;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+}
+
+td {
+	padding: 50px;
+	border: 1px solid #333333;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+}
+
+#menubar {
+	background: olive;
+	width: 70%; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menubar ul {
+	text-align: center;
+	width: 100%; /* 모든 아이템(<li>)을 한 줄에 품을 수 있는 폭 */
+}
+
+#menubar ul li {
+	display: inline-block; /* 새 줄로 넘어가지 않게 */
+	list-style-type: none; /* 마커 삭제 */
+	padding: 0px 80px; /* top=bottom=0, left=right=80px */
+}
+
+#menubar ul li a {
+	color: white;
+	text-decoration: none; /* 링크 보이지 않게 */
+}
+
+#menubar ul li a:hover {
+	color: violet; /* 마우스 올라 갈 때 색 */
+}
+
+.header {
+	width: 100%;
+	height: 70px;
+	background: black;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	table-layout: fixed;
+}
+
+.out {
+	width: 100%;
+	text-align: center;
+}
+
+.in {
+	display: inline-block;
+}
+
+input[id*="answer"] {
+	display: none;
+}
+
+input[id*="answer"]+label {
+	display: block;
+	border: 0;
+	font-weight: 900;
+	cursor: pointer;
+	font-size: 25px;
+}
+
+input[id*="answer"]+label+div {
+	max-height: 0;
+	transition: all .1ms;
+	overflow: hidden;
+}
+
+input[id*="answer"]+label+div+p {
+	display: inline-block;
+	padding: 20px;
+}
+
+input[id*="answer"]:checked+label+div {
+	max-height: 100000000000000000px;
+}
+
+.table1 {
+	border: 1px solid #333333;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+}
+
+.out {
+	width: 100%;
+	text-align: center;
+}
+
+.in {
+	display: inline-block;
+}
+
+a:link {
+	text-decoration: none;
+	color: olive;
+}
+
+a:visited {
+	text-decoration: none;
+	color: olive;
+}
+
+a:active {
+	text-decoration: none;
+	color: olive;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: olive;
+}
+</style>
+</head>
+<body>
+	<br>
+	<header class="header">
+		<a href="메인페이지.html"> 스니커 사이트 </a>
+	</header>
+	<nav id="menubar">
+		<ul>
+			<li><a href="메인페이지.html">홈 </a></li>
+			<li><a href="브랜드.html">브랜드 </a></li>
+			<li><a href="COORDINATES.html">COORDINATES</a></li>
+			<li><a href="갤러리.html">갤러리</a></li>
+		</ul>
+	</nav>
+	<section>
+		<br> <input type="radio" name="accordion" id="answer06">
+		<label for="answer06">닫기 ⓧ</label> <br>
+		<div class="accordian">
+			<input type="radio" name="accordion" id="answer01"> <label
+				for="answer01">1. 셀럽의 스니커 ▼ </label>
+			<div>
+				<br> <br>
+				<details>
+					<summary>드레이크</summary>
+					<img width="300" height="300" src="media/43.jpg">
+					<img width="300" height="300" src="media/44.jpg">
+				</details>
+				<details>
+					<summary>빌리 아일리쉬</summary>
+					<img width="300" height="300" src="media/45.jpg">
+					<img width="300" height="300" src="media/46.jpg">
+					<img width="300" height="300" src="media/47.jpg">
+				</details>
+				<details>
+					<summary>강다니엘</summary>
+					<img width="300" height="300" src="media/48.jpg">
+				</details>
+				<details>
+					<summary>박명수</summary>
+					<img width="300" height="300" src="media/49.jpg">
+				</details>
+				<details>
+					<summary>박재범</summary>
+					<img width="300" height="300" src="media/50.jpg">
+				</details>
+				<details>
+					<summary>장동건</summary>
+					<img width="300" height="300" src="media/51.jpg">
+				</details>
+				<details>
+					<summary>청하</summary>
+					<img width="300" height="300" src="media/52.jpg">
+					<img width="300" height="300" src="media/53.jpg">
+				</details>
+				<details>
+					<summary>저스틴 비버</summary>
+					<img width="300" height="300" src="media/54.jpg">
+				</details>
+				<details>
+					<summary>손나은</summary>
+					<img width="300" height="300" src="media/55.jpg">
+				</details>
+				<details>
+					<summary>헤이즈</summary>
+					<img width="300" height="300" src="media/56.jpg">
+				</details>
+				<details>
+					<summary>제니</summary>
+					<img width="300" height="500" src="media/57.jpg">
+					<img width="300" height="500" src="media/58.jpg">
+					<img width="300" height="500" src="media/59.jpg">
+				</details>
+				<details>
+					<summary>개코</summary>
+					<img width="300" height="300" src="media/60.jpg">
+					<img width="300" height="300" src="media/61.jpg">
+				</details>
+				<details>
+					<summary>봉태규</summary>
+					<img width="300" height="500" src="media/62.jpg">
+				</details>
+			</div>
+
+
+
+
+
+
+			<br> <input type="radio" name="accordion" id="answer02">
+			<label for="answer02">2. 스니커 영상 ▼</label>
+			<div class="out">
+				<div class="in">
+					<table class="table1">
+						<tr>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/Nd26wlbtnGY" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/EGnshedggR0" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/GtpPRVhaxas" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+						</tr>
+						<tr>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/EiXLuD7GT10" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/wTPJDtSFA2o" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/8SudKcL1AVA" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+						</tr>
+						<tr>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/itUSGX0h15o" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/HnTyxxqHjdI" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+							<td><iframe width="300" height="200"
+									src="https://www.youtube.com/embed/OswcizJ3X3k" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+
+			<br> <input type="radio" name="accordion" id="answer03">
+			<label for="answer03">3. 에어조던 시리즈 ▼</label>
+			<div class="out">
+				<div class="in">
+					<table class="table1">
+						<tr>
+							<td><img width="300" height="200" src="media/64.jpg"><br>조던
+								1</td>
+							<td><img width="300" height="200" src="media/65.jpg"><br>조던
+								2</td>
+							<td><img width="300" height="200" src="media/66.jpg"><br>조던
+								3</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/67.jpg"><br>조던
+								4</td>
+							<td><img width="300" height="200" src="media/68.jpg"><br>조던
+								5</td>
+							<td><img width="300" height="200" src="media/69.jpg"><br>조던
+								6</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/70.jpg"><br>조던
+								7</td>
+							<td><img width="300" height="200" src="media/71.jpg"><br>조던
+								8</td>
+							<td><img width="300" height="200" src="media/72.jpg"><br>조던
+								9</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/73.jpg"><br>조던
+								10</td>
+							<td><img width="300" height="200" src="media/74.jpg"><br>조던
+								11</td>
+							<td><img width="300" height="200" src="media/75.jpg"><br>조던
+								12</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/76.jpg"><br>조던
+								13</td>
+							<td><img width="300" height="200" src="media/77.jpg"><br>조던
+								14</td>
+							<td><img width="300" height="200" src="media/78.jpg"><br>조던
+								15</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/79.jpg"><br>조던
+								16</td>
+							<td><img width="300" height="200" src="media/80.jpg"><br>조던
+								17</td>
+							<td><img width="300" height="200" src="media/81.jpg"><br>조던
+								18</td>
+						</tr>
+						<tr>
+							<td><img width="300" height="200" src="media/82.jpg"><br>조던
+								19</td>
+							<td><img width="300" height="200" src="media/83.jpg"><br>조던
+								20</td>
+							<td><img width="300" height="200" src="media/84.jpg"><br>조던
+								21</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+	</section>
+
+
+
+
+
+</body>
+</html>
